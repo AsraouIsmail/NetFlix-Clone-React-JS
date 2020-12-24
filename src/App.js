@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 import Banner from './Banner';
 import Header from './Header';
@@ -8,18 +8,24 @@ import Row from './Row';
 function App() {
   return (
     <div className="App">
-      <h1>Netflix Clone App let's build it</h1>
-
       <Header />
 
       <Banner />
 
       <Row 
-      isLargeRow
-      title= "NETFLIX ORIGINALS"
-      
-      
+      title = "NETFLIX ORIGINALS"
+      fetchUrl = {requests.fetchNetFlixOriginals}
+      isLargeRow = {true}
+
       />
+
+        <Row title = "Trending Now" fetchUrl = {requests.fetchTrending} />
+        <Row title = "Top Rated"    fetchUrl = {requests.fetchTopRated} />
+        <Row title = "Action Movies" fetchUrl = {requests.fetchActionMovies} />
+        <Row title = "Horror Movies" fetchUrl = {requests.fetchHorroMovies} />
+        <Row title = "Romance Movies" fetchUrl = {requests.fetchRomanticMovies} />
+        <Row title = "Documentaries" fetchUrl = {requests.fetchDocumentaries} />
+        <Row title = "Comedy Movies" fetchUrl = {requests.fetchComedyMovies} />
 
     </div>
   );

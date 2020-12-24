@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0;
   padding: 20px;
@@ -23,4 +23,9 @@
   object-fit: contain;
   width: 30px;
   right: 20px;
+}
+
+.nav__black {
+  background-color: #111;
+  height: 15px;
 }
